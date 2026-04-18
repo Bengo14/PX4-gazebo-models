@@ -52,7 +52,6 @@
       <velocity_decay />
       <self_collide>0</self_collide>
       <sensor name="imu_sensor" type="imu">
-        <gz_frame_id>base_link</gz_frame_id>
         <always_on>1</always_on>
         <update_rate>250</update_rate>
         <imu>
@@ -111,7 +110,6 @@
         </imu>
       </sensor>
       <sensor name="air_pressure_sensor" type="air_pressure">
-        <gz_frame_id>base_link</gz_frame_id>
         <always_on>1</always_on>
         <update_rate>50</update_rate>
         <air_pressure>
@@ -124,7 +122,6 @@
         </air_pressure>
       </sensor>
       <sensor name="magnetometer_sensor" type="magnetometer">
-        <gz_frame_id>base_link</gz_frame_id>
         <always_on>1</always_on>
         <update_rate>100</update_rate>
         <magnetometer>
@@ -150,7 +147,6 @@
         </magnetometer>
       </sensor>
       <sensor name="navsat_sensor" type="navsat">
-        <gz_frame_id>base_link</gz_frame_id>
         <always_on>1</always_on>
         <update_rate>30</update_rate>
       </sensor>
@@ -752,7 +748,6 @@
         </inertia>
       </inertial>
       <sensor name='lidar' type='gpu_lidar'>
-        <gz_frame_id>lidar_sensor_link</gz_frame_id>
         <pose>0 0 0 3.14 0 0</pose>
         <update_rate>50</update_rate>
         <ray>
@@ -933,9 +928,6 @@
       <p_gain>10</p_gain>
       <i_gain>0</i_gain>
       <d_gain>0</d_gain>
-    </plugin>
-    <plugin filename="libAirSpeedPlugin.so" name="px4::AirSpeed">
-      <link_name>base_link</link_name>
     </plugin>
     <plugin filename="gz-sim-advanced-lift-drag-system" name="gz::sim::systems::AdvancedLiftDrag">
       <a0>0.0</a0>
