@@ -6,7 +6,7 @@
       <pose>0 0 0 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
-        <mass>4.985</mass>
+        <mass>3.5</mass>
         <inertia>
           <ixx>0.8743</ixx>
           <ixy>0</ixy>
@@ -152,7 +152,7 @@
       </sensor>
     </link>
     <link name='rotor_puller'>
-      <pose>0.5 0 0 0 1.57 0</pose>
+      <pose>0.3 0 0 0 1.57 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.0005</mass>
@@ -200,7 +200,7 @@
       <self_collide>0</self_collide>
     </link>
     <joint name='rotor_puller_joint' type='revolute'>
-      <child>rotor_puller0</child>
+      <child>rotor_puller</child>
       <parent>base_link</parent>
       <axis>
         <xyz>1 0 0</xyz>
@@ -270,7 +270,7 @@
         </material>
       </visual>
     </link>
-    <link name="left_flap">
+    <link name="left_canard">
       <inertial>
         <mass>0.00000001</mass>
         <inertia>
@@ -283,7 +283,7 @@
         </inertia>
         <pose>0 0.15 0 0.00 0 0.0</pose>
       </inertial>
-      <visual name='left_flap_visual'>
+      <visual name='left_canard_visual'>
         <pose>0.07 0.0 -0.08 0.00 0 0.0</pose>
         <geometry>
           <mesh>
@@ -297,7 +297,7 @@
         </material>
       </visual>
     </link>
-    <link name="right_flap">
+    <link name="right_canard">
       <inertial>
         <mass>0.00000001</mass>
         <inertia>
@@ -310,7 +310,7 @@
         </inertia>
         <pose>0 -0.15 0 0.00 0 0.0</pose>
       </inertial>
-      <visual name='right_flap_visual'>
+      <visual name='right_canard_visual'>
         <pose>0.07 0.0 -0.08 0.00 0 0.0</pose>
         <geometry>
           <mesh>
@@ -495,7 +495,7 @@
     </plugin>
     <joint name='servo_4' type='revolute'>
       <parent>base_link</parent>
-      <child>left_flap</child>
+      <child>left_canard</child>
       <pose>-0.07 0.2 0.08 0.00 0 0.0</pose>
       <axis>
         <xyz>0 1 0</xyz>
@@ -524,7 +524,7 @@
     </plugin>
     <joint name='servo_5' type='revolute'>
       <parent>base_link</parent>
-      <child>right_flap</child>
+      <child>right_canard</child>
       <pose>-0.07 -0.2 0.08 0.00 0 0.0</pose>
       <axis>
         <xyz>0 1 0</xyz>
@@ -546,7 +546,7 @@
       filename="gz-sim-joint-position-controller-system"
       name="gz::sim::systems::JointPositionController">
       <joint_name>servo_5</joint_name>
-      <sub_topic>servo_5</sub_topic>
+      <sub_topic>servo_4</sub_topic>
       <p_gain>10</p_gain>
       <i_gain>0</i_gain>
       <d_gain>0</d_gain>
@@ -710,7 +710,7 @@
       <control_surface>
         <name>servo_5</name>
         <direction>1</direction>
-        <index>5</index>
+        <index>4</index>
         <CD_ctrl>-0.002</CD_ctrl>
         <CY_ctrl>0</CY_ctrl>
         <CL_ctrl>-0.01</CL_ctrl>
