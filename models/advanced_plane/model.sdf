@@ -501,7 +501,7 @@
         <xyz>0 1 0</xyz>
         <limit>
           <lower>-0.53</lower>
-          <upper>0</upper>
+          <upper>0.53</upper>
         </limit>
         <dynamics>
           <damping>1.000</damping>
@@ -530,7 +530,7 @@
         <xyz>0 1 0</xyz>
         <limit>
           <lower>-0.53</lower>
-          <upper>0</upper>
+          <upper>0.53</upper>
         </limit>
         <dynamics>
           <damping>1.000</damping>
@@ -700,9 +700,9 @@
         <name>servo_4</name>
         <index>4</index>
         <direction>1</direction>
-        <CD_ctrl>-0.002</CD_ctrl>
+        <CD_ctrl>0</CD_ctrl>
         <CY_ctrl>0</CY_ctrl>
-        <CL_ctrl>-0.01</CL_ctrl>
+        <CL_ctrl>0</CL_ctrl>
         <Cell_ctrl>0</Cell_ctrl>
         <Cem_ctrl>0</Cem_ctrl>
         <Cen_ctrl>0</Cen_ctrl>
@@ -711,9 +711,9 @@
         <name>servo_5</name>
         <direction>1</direction>
         <index>4</index>
-        <CD_ctrl>-0.002</CD_ctrl>
+        <CD_ctrl>0</CD_ctrl>
         <CY_ctrl>0</CY_ctrl>
-        <CL_ctrl>-0.01</CL_ctrl>
+        <CL_ctrl>0</CL_ctrl>
         <Cell_ctrl>0</Cell_ctrl>
         <Cem_ctrl>0</Cem_ctrl>
         <Cen_ctrl>0</Cen_ctrl>
@@ -726,7 +726,7 @@
       <timeConstantUp>0.0125</timeConstantUp>
       <timeConstantDown>0.025</timeConstantDown>
       <maxRotVelocity>1136</maxRotVelocity>
-      <motorConstant>1.08e-05</motorConstant>
+      <motorConstant>4.6e-05</motorConstant>
       <momentConstant>0.01</momentConstant>
       <commandSubTopic>command/motor_speed</commandSubTopic>
       <motorNumber>0</motorNumber>
